@@ -5,7 +5,7 @@ import Landing from "../components/home/Landing";
 import LandingIntro from "../components/home/LandingIntro";
 import NewItems from "../components/home/NewItems";
 import TopSellers from "../components/home/TopSellers";
-import APIcall from "../components/home/APIcall";
+import APIhotCollect from "../components/home/APIhotCollect";
 
 const Home = () => {
 
@@ -20,7 +20,7 @@ const Home = () => {
         <div id="top"></div>
         <Landing />
         <LandingIntro />
-        <APIcall />
+        <APIhotCollect />
         {/* <HotCollections nft={ nft } loading={loading} /> */}
         <NewItems />
         <TopSellers />

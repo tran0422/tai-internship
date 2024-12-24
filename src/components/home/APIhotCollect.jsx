@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import HotCollections from './HotCollections';
 
-const APIcall = () => {
+const APIhotCollect = () => {
     const [nft, setNft] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -26,4 +26,4 @@ const APIcall = () => {
     );
 }
 
-export default APIcall
+export default APIhotCollect
