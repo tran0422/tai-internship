@@ -4,9 +4,10 @@ import BrowseByCategory from "../components/home/BrowseByCategory";
 import Landing from "../components/home/Landing";
 import LandingIntro from "../components/home/LandingIntro";
 // import NewItems from "../components/home/NewItems";
-import TopSellers from "../components/home/TopSellers";
+// import TopSellers from "../components/home/TopSellers";
 import APIhotCollect from "../components/home/APIhotCollect";
 import APInewItem from "../components/home/APInewItem";
+import APItopSell from "../components/home/APItopSell";
 
 const Home = () => {
 
@@ -23,9 +24,10 @@ const Home = () => {
         <LandingIntro />
         <APIhotCollect />
         <APInewItem />
+        <APItopSell />
         {/* <HotCollections nft={ nft } loading={loading} /> */}
         {/* <NewItems /> */}
-        <TopSellers />
+        {/* <TopSellers /> */}
         <BrowseByCategory />
       </div>
     </div>
