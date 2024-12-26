@@ -72,7 +72,7 @@ const NewItems = ({ nft }) => {
           <div className="de_countdown">{collection.expiryDate ? `${hours}H ${minutes}M ${seconds}S` : 'Expired'}</div>
 
           <div className="nft__item_wrap">
-            <div className="nft__item_extra">
+            {/* <div className="nft__item_extra">
               <div className="nft__item_buttons">
                 <button>Buy Now</button>
                 <div className="nft__item_share">
@@ -88,7 +88,7 @@ const NewItems = ({ nft }) => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <Link to={`/item-details/${collection.nftId}`}>
               <img
