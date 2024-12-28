@@ -53,7 +53,7 @@ const Nav = () => {
                       to="#"
                       className="btn-main connect-wallet"
                       onClick={() =>
-                        alert("This feature has not been implemented yet")
+                        alert("This feature has not been implemented yet, and never will be.")
                       }
                     >
                       Connect wallet
