@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Countdown from "./Countdown";
 
 const NewItems = ({ nft }) => {
   const slideSetting = {
@@ -24,33 +25,8 @@ const NewItems = ({ nft }) => {
     }]
   };
 
-  const calcTimeLeft = (expiryDate) => {
-    const now = new Date().getTime();
-    const timeLeft = expiryDate - now;
-
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    return { hours, minutes, seconds }
-  }
-
-  const [timeLeft, setTimeLeft] = useState([]);
-
-  useEffect(() => {
-    const initialTimeLeft = nft.map((item) => calcTimeLeft(item.expiryDate));
-    setTimeLeft(initialTimeLeft);
-
-    const intervalnumber = setInterval(() => {
-      const updateTimes = nft.map((item) => calcTimeLeft(item.expiryDate))
-      setTimeLeft(updateTimes);
-    }, 1000);
-
-    return () => clearInterval(intervalnumber);
-  }, [nft]);
-
   const renderNft = nft.map((collection, index) => {
-    const { hours, minutes, seconds } = timeLeft[index] || { hours: 0, minutes: 0, seconds: 0 }
+    // const { hours, minutes, seconds } = timeLeft[index] || { hours: 0, minutes: 0, seconds: 0 };
 
     return (
       <div className="newItem__wrap" key={collection.id}>
@@ -66,9 +42,30 @@ const NewItems = ({ nft }) => {
               <i className="fa fa-check"></i>
             </Link>
           </div>
-          <div className="de_countdown">{collection.expiryDate ? `${hours}H ${minutes}M ${seconds}S` : 'Expired'}</div>
+
+          <div className="de_countdown">
+            <Countdown expiryDate={collection.expiryDate} />
+          </div>
 
           <div className="nft__item_wrap">
+            {/* <div className="nft__item_extra">
+              <div className="nft__item_buttons">
+                <button>Buy Now</button>
+                <div className="nft__item_share">
+                  <h4>Share</h4>
+                  <a href="" target="_blank" rel="noreferrer">
+                    <i className="fa fa-facebook fa-lg"></i>
+                  </a>
+                  <a href="" target="_blank" rel="noreferrer">
+                    <i className="fa fa-twitter fa-lg"></i>
+                  </a>
+                  <a href="">
+                    <i className="fa fa-envelope fa-lg"></i>
+                  </a>
+                </div>
+              </div>
+            </div> */}
+
             <Link to={`/item-details/${collection.nftId}`}>
               <img
                 src={collection.nftImage}

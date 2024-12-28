@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import SubHeader from "../images/subheader.jpg";
-import ExploreItems from "../components/explore/ExploreItems";
+// import ExploreItems from "../components/explore/ExploreItems";
+import APIexplore from "../components/explore/APIexplore";
 
 const Explore = () => {
   useEffect(() => {
@@ -32,7 +33,8 @@ const Explore = () => {
         <section aria-label="section">
           <div className="container">
             <div className="row">
-              <ExploreItems />
+              {/* <ExploreItems /> */}
+              <APIexplore />
             </div>
           </div>
         </section>

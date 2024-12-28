@@ -9,7 +9,7 @@
 }
 
 .slick-list, .slick-track {
-    height: 320px;
+    /* height: 320px; */
     display: flex;
 }
 
@@ -68,8 +68,4 @@
 .skeleton-topPrice {
     width: 40px;
     height: 20px;
-}
-
-#section-items .container .row .slick-slider {
-    height: 516px;
 }
