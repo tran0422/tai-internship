@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const Countdown = ({expiryDate}) => {
+const Countdown = ({ expiryDate }) => {
     const [timeLeft, setTimeLeft] = useState([{ hours: 0, minutes: 0, seconds: 0 }]);
 
     const calcTimeLeft = (expiryDate) => {
@@ -23,7 +23,11 @@ const Countdown = ({expiryDate}) => {
         return () => clearInterval(intervalnumber);
     }, [expiryDate]);
 
-    return timeLeft;
+    return (
+        <div>
+            {expiryDate ? `${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s` : 'Expired'}
+        </div>
+    );
 }
 
 export default Countdown
