@@ -14,8 +14,8 @@ const Author = ({ nft }) => {
   };
 
   const renderNft = nft.map((collection, index) => {
-    const currentFollower = isFollowing[collection.toggleId] || false;
-    const newFollower = collection.followers + (currentFollower ? 1 : 0);
+    const clickedFollower = isFollowing[collection.toggleId] || false;
+    const newFollower = collection.followers + (clickedFollower ? 1 : 0);
 
     return (
       <div key={collection.id} id="wrapper">
@@ -58,7 +58,7 @@ const Author = ({ nft }) => {
                       <div className="de-flex-col">
                         <div className="profile_follower">{newFollower} followers</div>
                         <Link to="#" className="btn-main" onClick={() => toggleFollow(collection.toggleId)}>
-                          {currentFollower ? 'Unfollow' : 'Follow'}
+                          {clickedFollower ? 'Unfollow' : 'Follow'}
                         </Link>
                       </div>
                     </div>
