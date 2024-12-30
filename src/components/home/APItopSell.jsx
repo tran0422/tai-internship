@@ -51,7 +51,7 @@ const APItopSell = () => {
                                                 <Skeleton width={'110px'} height={'20px'} />
                                             </div>
                                             <div>
-                                                <Skeleton width={'30px'} height={'16px'} />
+                                                <Skeleton width={'110px'} height={'20px'} />
                                             </div>
                                         </div>
                                     </li>))}

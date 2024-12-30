@@ -21,7 +21,7 @@ const LandingIntro = () => {
                   accusantium doloremque laudantium, totam rem.
                 </p>
               </div>
-              <i className="wm icon_wallet"></i>
+              <i className="wm icon_wallet" ></i>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 mb-sm-30">
