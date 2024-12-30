@@ -4,9 +4,9 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HotCollections from './HotCollections';
-import Skeleton from '../UI/Skeleton';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Skeleton from '../UI/Skeleton';
 
 const APIhotCollect = () => {
     const [nft, setNft] = useState([]);
@@ -46,19 +46,15 @@ const APIhotCollect = () => {
                                 {new Array(4).fill(4).map((_, index) => (
                                     <div className="nft_coll" key={index}>
                                         <div className="nft_wrap">
-                                            {/* <div className="skeleton-collectonImg skeleton-box"></div> */}
                                             <Skeleton width={'100%'} height={'200px'} />
                                         </div>
                                         <div className="nft_coll_pp margintop0">
-                                            {/* <div className="skeleton-collectonAuthorImg skeleton-box"></div> */}
-                                            <Skeleton width={'60px'} height={'60px'} borderRadius={'50%'} />
+                                            <Skeleton width={'50px'} height={'50px'} borderRadius={'50%'} />
                                             <i className="fa fa-check"></i>
                                         </div>
                                         <div className="nft_coll_info">
-                                            {/* <div className="skeleton-collectonTitle skeleton-box"></div> */}
                                             <Skeleton width={'100px'} height={'20px'} />
                                             <br />
-                                            {/* <div className="skeleton-collectonERC skeleton-box"></div> */}
                                             <Skeleton width={'50px'} height={'20px'} />
                                         </div>
                                     </div>

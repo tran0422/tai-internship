@@ -6,10 +6,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Landing = () => {
-    useEffect(() => {
-      AOS.init();
-    }, []);
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  
   return (
     <section
       id="section-hero"
@@ -41,8 +41,8 @@ const Landing = () => {
               </Link>
               <div className="mb-sm-30"></div>
             </div>
-            <div className="col-md-6 xs-hide" >
-              <img src={NFT} className="lazy img-fluid" alt="" data-aos="fade-in" data-aos-duration="3000" />
+            <div className="col-md-6 xs-hide">
+              <img src={NFT} className="lazy img-fluid" alt="" data-aos="fade-up" data-aos-duration="3000"/>
             </div>
           </div>
         </div>

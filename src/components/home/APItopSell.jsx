@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import TopSellers from './TopSellers';
-import Skeleton from '../UI/Skeleton';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Skeleton from '../UI/Skeleton';
 
 const APItopSell = () => {
     const [nft, setNft] = useState([]);
@@ -43,18 +43,15 @@ const APItopSell = () => {
                                 {new Array(12).fill(12).map((_, index) => (
                                     <li key={index}>
                                         <div className="author_list_pp">
-                                            {/* <div className='skeleton-topAuthorImg skeleton-box'></div> */}
                                             <Skeleton width={'50px'} height={'50px'} borderRadius={'50%'} />
                                             <i className="fa fa-check"></i>
                                         </div>
                                         <div className="author_list_info">
                                             <div>
-                                                {/* <div className="skeleton-topTitle skeleton-box"></div> */}
                                                 <Skeleton width={'110px'} height={'20px'} />
                                             </div>
                                             <div>
-                                                {/* <div className="skeleton-topPrice skeleton-box"></div> */}
-                                                <Skeleton width={'30px'} height={'16px'} />
+                                                <Skeleton width={'110px'} height={'20px'} />
                                             </div>
                                         </div>
                                     </li>))}

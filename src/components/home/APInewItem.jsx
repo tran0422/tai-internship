@@ -4,9 +4,9 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NewItems from './NewItems';
-import Skeleton from '../UI/Skeleton';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Skeleton from '../UI/Skeleton';
 
 const APInewItem = () => {
     const [nft, setNft] = useState([]);
@@ -46,7 +46,6 @@ const APInewItem = () => {
                                 {new Array(4).fill(4).map((_, index) => (
                                     <div className="nft__item" key={index}>
                                         <div className="author_list_pp" >
-                                            {/* <div className="skeleton-newImg skeleton-box"></div> */}
                                             <Skeleton width={'50px'} height={'50px'} borderRadius={'50%'} />
                                             <i className="fa fa-check"></i>
                                         </div>
@@ -56,7 +55,6 @@ const APInewItem = () => {
                                         </div>
 
                                         <div className="nft__item_wrap">
-                                            {/* <div className="skeleton-newAuthorImg skeleton-box"></div> */}
                                             <Skeleton width={'268px'} height={'268px'} />
                                         </div>
 
@@ -64,13 +62,12 @@ const APInewItem = () => {
                                             <div>
                                                 <Skeleton width={'268px'} height={'18px'} />
                                             </div>
-                                            <div className="nft__item_price" >
+                                            <div className='nft__item_price'>
                                                 <Skeleton width={'150px'} height={'16px'} />
                                             </div>
                                         </div>
 
                                         <div className="nft__item_like">
-                                            {/* <div className="skeleton-newLikes skeleton-box" ></div> */}
                                             <Skeleton width={'30px'} height={'16px'} />
                                         </div>
                                     </div>
